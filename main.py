@@ -38,10 +38,13 @@ while game_is_on:
         car_counter = 0
     for car in cars:
         car.move_cars()
-        if abs(player.ycor() - car.xcor()) < 5:
+        if abs(player.distance(car) < 10):
             # Detect when the turtle player collides with a car and stop the game if this happens
             game_is_on = False
-            print("Game Over")
+
+
+
+screen.exitonclick()
 
 
 
